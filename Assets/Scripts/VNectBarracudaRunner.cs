@@ -190,8 +190,8 @@ public class VNectBarracudaRunner : MonoBehaviour
         if (inputs[inputName_1] == null)
         {
             inputs[inputName_1] = input;
-            inputs[inputName_2] = new Tensor(videoCapture.MainTexture);
-            inputs[inputName_3] = new Tensor(videoCapture.MainTexture);
+            inputs[inputName_2] = input;
+            inputs[inputName_3] = input;
         }
         else
         {
@@ -202,7 +202,7 @@ public class VNectBarracudaRunner : MonoBehaviour
             inputs[inputName_1] = input;
         }
 
-        StartCoroutine(ExecuteModelAsync());
+        ExecuteModelAsync();
     }
 
     /// <summary>
@@ -213,16 +213,20 @@ public class VNectBarracudaRunner : MonoBehaviour
     Dictionary<string, Tensor> inputs = new Dictionary<string, Tensor>() { { inputName_1, null }, { inputName_2, null }, { inputName_3, null }, };
     Tensor[] b_outputs = new Tensor[4];
 
-    private IEnumerator ExecuteModelAsync()
+    private void ExecuteModelAsync()
     {
         // Create input and Execute model
-        yield return _worker.ExecuteAsync(inputs);
+         _worker.Execute(inputs);
 
         // Get outputs
         for (var i = 2; i < _model.outputs.Count; i++)
         {
             b_outputs[i] = _worker.PeekOutput(_model.outputs[i]);
         }
+
+        // b_outputs[2] = _worker.PeekOutput("530");
+        // b_outputs[3] = _worker.PeekOutput("516");
+
 
         // Get data from outputs
         offset3D = b_outputs[2].data.Download(b_outputs[2].shape);
