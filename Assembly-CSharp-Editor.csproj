@@ -328,11 +328,11 @@
  <Reference Include="UnityEditor.iOS.Extensions">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.13f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Google.Protobuf">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/PackageCache/com.unity.barracuda@0.6.3-preview/Barracuda/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Burst.Unsafe">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/PackageCache/com.unity.burst@1.2.3/Unity.Burst.Unsafe.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Protobuf">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/PackageCache/com.unity.barracuda@0.7.1-preview/Barracuda/Runtime/Plugins/ProtoBuffer/Google.Protobuf.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -703,14 +703,8 @@
  <Reference Include="UnityEngine.TestRunner">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
- <Reference Include="MacBLAS">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/MacBLAS.dll</HintPath>
- </Reference>
  <Reference Include="Unity.Burst">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
- </Reference>
- <Reference Include="Barracuda-editor">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Barracuda-editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Burst.Editor">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
@@ -720,15 +714,6 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Barracuda">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Barracuda.dll</HintPath>
- </Reference>
- <Reference Include="iOSBLAS">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/iOSBLAS.dll</HintPath>
- </Reference>
- <Reference Include="BurstBLAS">
- <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/BurstBLAS.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -741,6 +726,21 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Barracuda.MacBLAS">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Barracuda.MacBLAS.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Barracuda.Editor">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Barracuda.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Barracuda">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Barracuda.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Barracuda.iOSBLAS">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Barracuda.iOSBLAS.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Barracuda.BurstBLAS">
+ <HintPath>/Users/magdasbant/ThreeDPoseUnityBarracuda/Library/ScriptAssemblies/Unity.Barracuda.BurstBLAS.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

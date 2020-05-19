@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-using Barracuda;
+using Unity.Barracuda;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -14,7 +13,7 @@ public class VNectBarracudaRunner : MonoBehaviour
     /// </summary>
     public NNModel NNModel;
 
-    public BarracudaWorkerFactory.Type WorkerType = BarracudaWorkerFactory.Type.ComputePrecompiled;
+    public WorkerFactory.Type WorkerType = WorkerFactory.Type.ComputePrecompiled;
     public bool Verbose = true;
 
     public VNectModel VNectModel;
@@ -155,7 +154,7 @@ public class VNectBarracudaRunner : MonoBehaviour
 
         // Init model
         _model = ModelLoader.Load(NNModel, Verbose);
-        _worker = BarracudaWorkerFactory.CreateWorker(WorkerType, _model, Verbose);
+        _worker = WorkerFactory.CreateWorker(WorkerType, _model, Verbose);
         StartCoroutine("WaitLoad");
 
         // Init VNect model
@@ -226,8 +225,8 @@ public class VNectBarracudaRunner : MonoBehaviour
         }
 
         // Get data from outputs
-        offset3D = b_outputs[2].data.Download(b_outputs[2].data.GetMaxCount());
-        heatMap3D = b_outputs[3].data.Download(b_outputs[3].data.GetMaxCount());
+        offset3D = b_outputs[2].data.Download(b_outputs[2].shape);
+        heatMap3D = b_outputs[3].data.Download(b_outputs[3].shape);
         
         // Release outputs
         for (var i = 2; i < b_outputs.Length; i++)
